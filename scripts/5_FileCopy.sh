@@ -1,7 +1,6 @@
 #!/bin/bash
 
-SSH_DIR=~/.ssh/
 SCRIPT_DIR=$(cd $(dirname $0); pwd)
-ETC_DIR=$(cd ${SCRIPT_DIR}/../etc; pwd)
+ETC_DIR=$(cd ${SCRIPT_DIR}/../conf; pwd)
 
-cp ${ETC_DIR}/.ssh/config ${SSH_DIR}
+cp -ri ${ETC_DIR}/. ~

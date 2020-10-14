@@ -7,7 +7,3 @@ fi
 
 brew bundle --file=${SCRIPT_DIR}/../Brewfile
 brew cleanup
-
-if [ -e /usr/local/share/zsh-completions ]; then
-    chmod go-w /usr/local/share
-fi
