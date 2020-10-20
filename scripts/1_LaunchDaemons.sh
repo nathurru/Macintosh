@@ -7,7 +7,6 @@ SCRIPT_DIR=$(cd $(dirname $0); pwd)
 LAUNCHD_DIR=$(cd ${SCRIPT_DIR}/../launchds; pwd)
 
 for file in `\find ${LAUNCHD_DIR}/globalDaemons -maxdepth 1 -name '*.plist'`; do
-
     DST_FILE=${GLOBAL_DAEMON_DIR}/$(basename ${file})
     printf "Setting ${DST_FILE}..."
     if [ -e  ${DST_FILE} ]; then
